@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Position</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            position: fixed;
+            width: 180px;
+            height: 100vh;
+            background-color: #284f75;
+        }
+
+        nav img {
+            width: 180px;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            text-align: center;
+            margin: 20px auto;
+            border-left: transparent solid 4px;
+        }
+
+        nav ul li:hover {
+            border-left-color: white;
+        }
+
+        nav ul .active {
+            border-left-color: white;
+        }
+
+        nav ul li a {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            padding: 10px 0;
+            width: 100%;
+        }
+
+        main {
+            margin-left: 180px;
+            padding: 20px;
+        }
+
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .card {
+            position: relative;
+            width: 30%;
+            height: 300px;
+            margin: 20px auto;
+            background-image: url("img/glace.jpeg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center top;
+            border-radius: 10px;
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.5);
+        }
+
+        .card h2 {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            text-decoration: none;
+            color: #284f75;
+            background: rgba(40, 79, 117, 0.3);
+            padding: 8px 15px;
+            margin: 0;
+            box-sizing: border-box;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+
+        .btn-contact {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            text-decoration: none;
+            background-color: #284f75;
+            color: white;
+            border-radius: 10px;
+            padding: 10px 15px;
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.5);
+        }
+
+        .btn-more {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            text-decoration: none;
+            background-color: #284f75;
+            color: white;
+            border-radius: 10px;
+            padding: 10px 15px;
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="img/glace.jpeg" alt="">
+        <ul>
+            <li><a href="">Accueil</a></li>
+            <li class="active"><a href="">Listing</a></li>
+            <li><a href="">Blabla</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <h1>Test positionnement</h1>
+
+        <section class="flex">
+            <div class="card">
+                <h2>La glace!</h2>
+                <a href="" class="btn-more">+</a>
+            </div>
+            <div class="card">
+                <h2>La glace!</h2>
+                <a href="" class="btn-more">+</a>
+            </div>
+            <div class="card">
+                <h2>La glace!</h2>
+                <a href="" class="btn-more">+</a>
+            </div>
+        </section>
+    </main>
+
+    <a class="btn-contact" href="">Contacter moi !</a>
+</body>
+</html>
